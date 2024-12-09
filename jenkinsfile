@@ -1,0 +1,17 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Prakashreddynalla/jenkins-1.git'
+            }
+        }
+        stage('python3 app.py') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+    }
+}
