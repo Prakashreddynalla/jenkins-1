@@ -8,9 +8,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Prakashreddynalla/jenkins-1.git'
             }
         }
-        stage('python3 app.py') {
+        stage('python') {
             steps {
-                sh 'terraform init'
+                sh 'python3 app.py'
             }
         }
     }
